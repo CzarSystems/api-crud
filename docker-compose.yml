@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  db-api-erp:
+    image: postgres:alpine
+    ports:
+      - "5440:5432"
+    container_name: "db-api-erp"
+    restart: always
+    volumes:
+      - ./db-api-erp:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: api
+      POSTGRES_PASSWORD: api@85Flavio
+
+volumes:
+  db-api-erp:
+    
